@@ -1,0 +1,5 @@
+#!name=IPv6 VIF
+#!desc=Enable IPv6 VIF support.
+
+[General]
+ipv6-vif = auto

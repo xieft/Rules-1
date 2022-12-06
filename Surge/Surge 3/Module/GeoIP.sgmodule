@@ -1,5 +1,5 @@
 #!name=GeoIP
-#!desc=自定义 GeoIP 数据库
+#!desc=Custom GeoIP database.
 
 [General]
 geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb

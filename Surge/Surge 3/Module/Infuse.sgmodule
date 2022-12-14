@@ -1,0 +1,5 @@
+#!name=Infuse DIRECT
+#!desc=Emby server direct connection.
+
+[Rule]
+DOMAIN-SUFFIX,emby.wtf,DIRECT

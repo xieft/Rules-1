@@ -1,9 +1,9 @@
-#!name=llsyd
-#!desc=llsyd.
+#!name=流利说·阅读
+#!desc=解锁流利说·阅读会员、解锁阅读权限、解锁音频权限等
 #!system=ios
 
 [Script]
-llsyd = type=http-response,pattern=^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js
+流利说·阅读 = type=http-response,pattern=^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js
 
 [MITM]
 hostname = %APPEND% vira.llsapp.com

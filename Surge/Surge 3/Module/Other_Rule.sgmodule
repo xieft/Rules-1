@@ -4,3 +4,4 @@
 [Rule]
 DOMAIN,podcasts.apple.com,Proxy
 DOMAIN,amp-api.podcasts.apple.com,Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleProxy/AppleProxy.list,Proxy

@@ -2,6 +2,4 @@
 #!desc=Proxy required for normal use.
 
 [Rule]
-DOMAIN,podcasts.apple.com,Proxy
-DOMAIN,amp-api.podcasts.apple.com,Proxy
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleProxy/AppleProxy.list,Proxy
+RULE-SET,https://raw.githubusercontent.com/xieft/Rules-1/main/Surge/AppleProxy.list,Proxy

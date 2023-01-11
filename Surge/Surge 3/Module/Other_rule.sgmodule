@@ -1,0 +1,6 @@
+#!name=Other rule
+#!desc=Proxy required for normal use.
+
+[Rule]
+DOMAIN-SUFFIX,podcasts.apple.com,Proxy
+DOMAIN-SUFFIX,amp-api.podcasts.apple.com,Proxy

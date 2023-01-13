@@ -3,7 +3,7 @@
 #!system=ios
 
 [Rule]
-DOMAIN, sdkapp.uve.weibo.com, DIRECT
+DOMAIN, sdkapp.uve.weibo.com, Direct
 
 [URL Rewrite]
 # > 微博_应用内弹窗广告@ddgksf2013

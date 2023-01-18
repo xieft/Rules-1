@@ -36,6 +36,8 @@ weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/p
 weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [Map Local]
+# > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > 微博_Spotlight@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > 微博国际版_屏蔽hotsearch@ddgksf2013

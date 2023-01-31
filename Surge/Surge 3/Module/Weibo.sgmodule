@@ -6,12 +6,14 @@
 DOMAIN, sdkapp.uve.weibo.com, direct
 
 [URL Rewrite]
+
 # > 微博_应用内弹窗广告@ddgksf2013
 ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) - reject
 # > 微博_屏蔽sdkconfig请求@ddgksf2013
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - reject
 
 [Script]
+
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
 weibo_json = type=http-response,pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_去广告以及去除各部分推广模块@zmqcherish,@ddgksf2013
@@ -36,6 +38,9 @@ weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/p
 weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 [Map Local]
+
+# > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/!\/huati\/discovery_home_bottom_getdotinfo data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > 微博_Spotlight@ddgksf2013
@@ -50,4 +55,5 @@ weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/p
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic data="https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_topic.json"
 
 [MITM]
+
 hostname = %APPEND% *api.weibo*, *uve.weibo.com

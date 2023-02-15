@@ -12,6 +12,8 @@ DOMAIN, sdkapp.uve.weibo.com, direct
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - reject
 
 [Script]
+# > 微博_视频信息处理@ddgksf2013
+weibo_json = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
 weibo_json = type=http-response,pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_去广告以及去除各部分推广模块@zmqcherish,@ddgksf2013
@@ -46,9 +48,9 @@ weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/p
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
 # > 微博国际版_屏蔽热推荐@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
-# > 微博国际版_屏蔽searching_info@ddgksf2013
+# > 微博国际版_屏蔽searching_info@shiro
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info data="https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_info.json"
-# > 微博国际版_屏蔽search_topic@ddgksf2013 
+# > 微博国际版_屏蔽search_topic@shiro
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic data="https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_topic.json"
 
 [MITM]

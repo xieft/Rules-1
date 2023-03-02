@@ -12,6 +12,8 @@ DOMAIN, sdkapp.uve.weibo.com, direct
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - reject
 
 [Script]
+# > 微博_每日一次的开屏广告请求@ddgksf2013
+weibo_json = type=http-response,pattern=^https?:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_视频信息处理@ddgksf2013
 weibo_json = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
@@ -54,4 +56,4 @@ weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/p
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic data="https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_topic.json"
 
 [MITM]
-hostname = %APPEND% *api.weibo*, *uve.weibo.com
+hostname = %APPEND% api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, boot.biz.weibo.com

@@ -12,6 +12,8 @@ DOMAIN, sdkapp.uve.weibo.com, direct
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php - reject
 
 [Script]
+# > 微博_开屏广告预加载处理@ddgksf2013
+weibo_json = type=http-response,pattern=^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_未登陆状态下首页信息流处理@ddgksf2013
 weibo_json = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_视频信息处理@ddgksf2013

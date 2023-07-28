@@ -1,5 +1,5 @@
 # NAME: AppleProxy
-# UPDATED: 2023-3-6
+# UPDATED: 2023-07-20
 
 DOMAIN,podcasts.apple.com
 DOMAIN,amp-api.podcasts.apple.com
@@ -18,4 +18,4 @@ DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,blobstore.apple.com
 DOMAIN-SUFFIX,digicert.com
 USER-AGENT,com.apple.trustd*
-PROCESS-NAME,lookupviewservice
+PROCESS-NAME,LookupViewService
